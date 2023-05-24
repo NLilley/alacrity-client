@@ -1,0 +1,21 @@
+.text {
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+  top: -10px;
+
+  user-select: none;
+}
+
+.oscillator {
+  display: inline-block;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}

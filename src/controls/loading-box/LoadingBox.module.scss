@@ -1,0 +1,28 @@
+.loading-box-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  border: var(--basic-border);
+  backdrop-filter: var(--backdrop-blur);
+
+  background: linear-gradient(100deg,
+      rgba(255, 255, 255, 0) 47%,
+      rgba(255, 255, 255, .15) 50%,
+      rgba(255, 255, 255, 0) 53%) transparent;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1.5s loading ease-out infinite;
+
+  @keyframes loading {
+    to {
+      background-position-x: -60%;
+    }
+  }
+}

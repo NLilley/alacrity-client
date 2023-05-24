@@ -1,0 +1,70 @@
+@use '/src/shared/global.scss';
+
+.watchlist-display {
+  min-height: 400px;
+}
+
+.select-wrapper {
+  width: 80%;
+  float: right;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.add-watchlist,
+.delete-watchlist {
+  font-size: 1.25rem;
+  flex: content;
+  cursor: pointer;
+  position: relative;
+  top: 8px;
+  flex: 0;
+
+  svg path {
+    fill: var(--color-nav);
+  }
+
+  &:focus,
+  &:hover {
+    path {
+      fill: var(--color-f-main);
+    }
+  }
+}
+
+
+.select-watchlist {
+  flex: 2;
+  margin-left: 8px;
+}
+
+.add-ticker {
+  float: right;
+  font-size: 1.25rem;
+  padding-top: 8px;
+  cursor: pointer;
+  user-select: none;
+
+  svg {
+    vertical-align: middle;
+
+
+    path {
+      fill: var(--color-nav);
+    }
+
+    &:hover {
+      path {
+        fill: var(--color-f-main);
+      }
+    }
+  }
+}
+
+@media (max-width: global.$mobile-break-point) {
+  .select-wrapper {
+    width: 100%;
+    float: none;
+  }
+}

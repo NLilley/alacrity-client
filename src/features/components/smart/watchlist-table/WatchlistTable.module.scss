@@ -1,0 +1,25 @@
+.left-right {
+  display: flex;
+  gap: 16px;
+
+
+  div {
+    width: 50px;
+  }
+}
+
+.price {
+  width: 100px;
+}
+
+.watchlist-item {
+  svg {
+    width: 32px;
+    height: 32px;
+
+    &:focus path,
+    &:hover path {
+      fill: var(--color-nav);
+    }
+  }
+}

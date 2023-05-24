@@ -1,0 +1,25 @@
+@use '/src/shared/global.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 256px;
+}
+
+.actions {
+  flex: 1;
+  bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: global.$mobile-break-point) {
+  .actions {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

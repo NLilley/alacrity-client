@@ -1,0 +1,64 @@
+@use '/src/shared/global.scss';
+
+$search-bar-height: 48px;
+
+.search {
+  padding: 0px global.$nav-bar-width;
+  padding-top: 40px;
+}
+
+.bar {
+  height: $search-bar-height;
+  width: 100%;
+  background-color: var(--color-bg-glassy);
+  display: flex;
+
+  &-icon {
+    height: $search-bar-height;
+    width: $search-bar-height;
+    background: var(--color-subtle);
+    text-align: center;
+    display: inline-block;
+
+    svg {
+      width: 32px;
+      vertical-align: middle;
+      height: 100%;
+    }
+  }
+
+  &-input {
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding-left: 16px;
+    flex: 1;
+    letter-spacing: 1px;
+    width: 100%;
+  }
+}
+
+.result-wrapper {
+  margin: 40px 0 40px 0;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.selection-summary {
+  display: none;
+  border: var(--basic-border);
+}
+
+@media (max-width: global.$mobile-break-point){
+  .search {
+    padding: 0px 16px;
+  }
+}
+
+@media (min-width: global.$tablet-break-point) {
+  .selection-summary {
+    display: block;
+  }
+}

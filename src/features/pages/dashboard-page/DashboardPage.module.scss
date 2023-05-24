@@ -1,0 +1,72 @@
+@use '/src/shared/global.scss';
+
+.dashboard {
+  display: block; // Override default grid
+  padding: 0px global.$nav-bar-width;
+  max-width: global.$widest-content;
+  margin: auto;
+
+  &-ticker-tape-panel {
+    overflow: hidden;
+  }
+
+  &-panels {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: baseline;
+  }
+
+  &-panel {
+    display: flex;
+    overflow: auto;
+
+    >div {
+      align-self: stretch;
+      flex: 1;
+    }
+  }
+
+  &-column {
+    display: grid;
+    gap: 60px;
+    perspective: var(--perspective);
+  }
+}
+
+@media (max-width: global.$mobile-break-point) {
+  .dashboard {
+
+    &-column,
+    &-panels {
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: global.$tablet-break-point) {
+  .dashboard {
+    padding-top: 10px !important;
+    &-panels {
+      gap: 20px;
+    }
+  }
+}
+
+@media (min-width: global.$tablet-break-point) {
+  section.dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard {
+    padding-top: 30px !important;
+
+    &-ticker-tape-panel {
+      grid-column: span 2;
+    }
+
+    &-panels {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}

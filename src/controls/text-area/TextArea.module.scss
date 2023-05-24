@@ -1,0 +1,28 @@
+@use '/src/shared/global.scss';
+
+.text-area {
+  margin: 12px 0;
+
+  textarea {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    width: 99%;
+    min-height: 5rem;
+    box-sizing: border-box;
+    color: var(--color-f-main);
+
+    &[disabled] {
+      color: var(--color-f-diminished);
+      resize: none;
+    }
+  }
+}
+
+@media (max-width: global.$mobile-break-point) {
+  .text-area {
+    textarea {
+      resize: none;
+    }
+  }
+}

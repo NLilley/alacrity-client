@@ -1,0 +1,11 @@
+.not-implemented{
+  display: block;
+  
+  > div {
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+    flex-direction: column;
+    gap:16px;
+  }
+}

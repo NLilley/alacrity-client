@@ -1,0 +1,13 @@
+.oscillators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;  
+  padding: 40px;
+
+  text-align:center;
+}
+
+.oscillator {
+  width: 100%;
+  flex: 1;
+}

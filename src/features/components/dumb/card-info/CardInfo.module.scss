@@ -1,0 +1,41 @@
+@use '/src/shared/global.scss';
+
+.card-info {
+  fieldset {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 8px;
+  }
+
+  input {
+    display: inline-block;
+
+    &[disabled] {
+      color: var(--color-f-diminished);
+    }
+  }
+
+  .cardholder-name {
+    max-width: 256px;
+  }
+
+  .card-number {
+    max-width: 256px;
+    flex: 1;
+  }
+
+  .cvc {
+    max-width: 110px;
+    flex: 0;
+  }
+
+  .expiry {
+    max-width: 122px;
+    flex: 0;
+  }
+
+}
+
+@media (max-width: global.$mobile-break-point) {
+  .card-info {}
+}

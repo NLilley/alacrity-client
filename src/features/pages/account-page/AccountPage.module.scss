@@ -1,0 +1,15 @@
+.fund-summary {
+  display: flex;
+  gap: 40px;
+
+  >div {
+    flex: 1;
+    font-size: 1.3rem;
+  }
+}
+
+.actions {  
+  display: flex;
+  gap: 16px;  
+  margin: 16px 0;
+}

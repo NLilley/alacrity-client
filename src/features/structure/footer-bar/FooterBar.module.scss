@@ -1,0 +1,155 @@
+@use '/src/shared/global.scss';
+
+.footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 4px 4px 0;
+  z-index: 2000;
+
+  border-top: var(--color-bg-content);
+  background: var(--color-bg-main);
+
+  display: flex;
+  height: global.$footer-height;
+  justify-content: space-around;
+  align-items: center;
+
+  path {
+    fill: var(--color-icon);
+  }
+}
+
+.active>div {
+  border-left: 5px solid var(--color-alacrity);
+
+  svg {
+    margin-left: -26px;
+  }
+
+  .menu-text {
+    margin-left: -5px;
+  }
+}
+
+.active-bottom {
+  margin-bottom: 12px;
+  // border-bottom: 4px solid var(--color-alacrity);
+  border-bottom: 4px solid transparent;
+
+  svg {
+    margin-bottom: -16px;
+  }
+}
+
+.bottom-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  position: relative;
+  top: 2px;
+}
+
+.menu-icon {
+  position: relative;
+  top: 2px;
+}
+
+.popup {
+  position: fixed;
+  bottom: global.$footer-height;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+
+  background: #0e0e0ec0;
+  backdrop-filter: blur(4px);
+
+  &[aria-hidden="true"] {
+    visibility: hidden;
+  }
+}
+
+.expanded {
+  transform: translateY(0);
+  transition: 0.125s;
+}
+
+.collapsed {
+  transform: translateY(200%);
+  transition: 0s;
+}
+
+.menu-item {
+  box-sizing: border-box;
+  padding: 16px;
+  height: 64px;
+  border-top: 1px solid var(--color-nav);
+  color: var(--color-f-main);
+
+  svg {
+    width: 48px;
+    height: 48px;
+    margin-left: -16px;
+  }
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  path {
+    fill: var(--color-icon);
+  }
+
+  &.logo {
+    background: var(--color-nav);
+    border-top: none;
+
+    path {
+      fill: global.$color-alacrity;
+    }
+  }
+}
+
+.menu-icon {
+  width: 64px;
+  justify-content: center;
+  display: flex;
+  position: relative;
+
+  &-number {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    border-radius: 50%;
+    background-color: var(--color-lose);
+    width: 24px;
+    height: 24px;
+    line-height: 23px;
+    text-align: center;
+  }
+}
+
+.menu-search {
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: global.$mobile-break-point) {
+  .footer-bar {
+    display: none;
+  }
+
+  .popup {
+    display: none;
+  }
+}

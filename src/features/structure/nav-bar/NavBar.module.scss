@@ -1,0 +1,169 @@
+@use '/src/shared/global';
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: global.$nav-bar-width;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--color-bg-main);
+    border-right: var(--basic-border);
+
+    overflow: hidden;
+
+    user-select: none;
+
+    transition: width 0.1s;
+
+    .active div {
+        &:hover path {
+            fill: var(--color-icon);
+        }
+
+        div.icon {
+            border-left: 4px solid var(--color-alacrity);
+
+            svg {
+                margin-left: -8px;
+            }
+        }
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+
+        .icon {
+            width: global.$nav-bar-width;
+            height: global.$nav-bar-width;
+            position: relative;
+        }
+
+        &:hover {
+            background-color: var(--color-nav);
+        }
+    }
+
+    &-top {
+        flex: 1;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                background-color: var(--color-nav);
+            }
+        }
+    }
+
+    &-bottom {
+        flex: 0;
+
+        &-item {
+            cursor: pointer;
+            padding-top: 6px;
+            display: flex;
+            align-items: center;
+            display: flex;
+
+            &:hover {
+                background-color: var(--color-nav);
+            }
+        }
+    }
+
+    &.expanded {
+        width: 256px;
+    }
+}
+
+.nav-bar .text {
+    font-size: 18px;
+    flex: 1;
+    padding-left: 16px;
+    position: relative;
+    top: -1px;
+    color: var(--color-f-main);
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.nav-bar .icon {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+
+    width: global.$nav-bar-width;
+    height: global.$nav-bar-width;
+
+    &-number {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        border-radius: 50%;
+        background-color: var(--color-lose);
+        color: var(--color-f-main);
+        width: 24px;
+        height: 24px;
+        line-height: 23px;
+        text-align: center;
+    }
+
+    path {
+        fill: var(--color-icon);
+    }
+
+    &-home,
+    &-settings,
+    &-account,
+    &-watchlist
+    {
+        svg {
+            width: 38px;
+            height: 38px;
+        }
+    }
+
+    &-search {
+        svg {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &-logout {
+        svg {
+            width: 34px;
+            height: 34px;
+        }
+    }
+
+    &-logo {
+        position: relative;
+        top: 4px;
+
+        svg {
+            width: 34px;
+            height: 34px;
+        }
+    }
+}
+
+@media (max-width: global.$mobile-break-point) {
+    .nav-bar {
+        display: none;
+    }
+}

@@ -1,0 +1,54 @@
+@use '/src/shared/global';
+
+.scroll-panel {
+  padding: 16px 48px 16px 48px;
+  gap: 40px;
+  display: flex;
+  overflow-x: scroll;
+  box-sizing: border-box;
+  min-height: 200px;
+
+  transform-style: preserve-3d;
+  // perspective-origin: 50% 25vh !important;
+
+  .scroll-child {
+    transition-duration: 0.5s;
+    margin-top: 32px;
+  }
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    height: 10px;
+    width: 8px;
+    z-index: 100;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-scroll);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  scrollbar-color: var(--color-subtle) transparent;
+  scrollbar-width: thin;
+}
+
+@media (max-width: global.$tablet-break-point) {
+  .scroll-panel {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media(max-width: global.$mobile-break-point){
+  .scroll-panel {
+    padding-top: 6px;
+    min-height: 120px;
+
+    .scroll-child {
+      margin-top: 10px;
+    }
+  }
+}

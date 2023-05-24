@@ -1,0 +1,33 @@
+.dialog {
+  color: var(--color-f-main);
+  backdrop-filter: var(--backdrop-blur);
+  background: var(--backdrop-background);
+  border: var(--basic-border);
+  padding: 16px 32px;
+  min-width: 35%;
+
+  &::backdrop {
+    background-color: #080808cc;
+  }
+
+  .header {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    padding-bottom: 4px;
+    border-bottom: var(--basic-border);
+  }
+
+  .close {
+    position: absolute;
+    right: 32px;
+    top: 16px;
+    cursor: pointer;
+    user-select: none;
+    color: var(--color-nav);
+    z-index: 10;
+
+    &:hover {
+      filter: brightness(1.8);
+    }
+  }
+}

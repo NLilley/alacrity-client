@@ -1,0 +1,7 @@
+.text-input {
+  margin: 12px 0;
+
+  input[disabled] {
+    color: var(--color-f-diminished);    
+  }
+}

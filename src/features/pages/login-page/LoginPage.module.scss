@@ -1,0 +1,28 @@
+@use '/src/shared/global';
+
+section.login {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 22vh;
+}
+
+.login-card {
+  width: 75%;
+  max-width: 660px;
+  min-width: 256px;
+  flex: 1;
+}
+
+.hint-card {
+  flex: 0;
+  min-width: 256px;
+}
+
+@media (max-width: global.$tablet-break-point) {
+  .login {
+    padding-top: unset;
+    align-items: center !important;
+    flex-direction: column;
+  }
+}
