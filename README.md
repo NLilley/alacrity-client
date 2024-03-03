@@ -19,20 +19,20 @@ design and development which are most unsuitable for a production environment!
 # Project Overview
 
 Alacrity client is a React/Redux Toolkit Web Application. It provides the front end for the Alacrity paper trading project, and includes the following features:
-- Basic account funtionality (Login, Logout, Password Management, etc.)
-- Real time streaming price data (for simultated instruments)
+- Basic account functionality (Login, Logout, Password Management, etc.)
+- Real time streaming price data (for simulated instruments)
 - Historic candle storage and recovery
-- Lightweight Chart visualization intergration (https://github.com/tradingview/lightweight-charts)
+- Lightweight Chart visualization integration (https://github.com/tradingview/lightweight-charts)
 - Market and Limit Orders
 - Trading Notification System
 - Accessible UI
-- Profit Loss calculation, Porfolio Analysis
+- Profit Loss calculation, Portfolio Analysis
 - ... And other essential trading functionality
 
 # Build
 
 alacrity-client requires a modern version of node to build (tested with v21.6.0), and uses the yarn package manager.  Once your build environment is prepared, run `yarn install` to fetch all project dependencies,
-and then `yarn dev` to fire up the dev servver.
+and then `yarn dev` to fire up the dev server.
 
 If you have any issues, please either raise an issue, or reach out to me for help.
 
@@ -40,7 +40,7 @@ Note: The front-end requires the AlacrityServer backend to be running in order t
 
 # Technology
 
-The web client is fundamentally a TypeScript React WebApp using Redux Toolkit for state management and backend interaction, SignalR for websocket realtime data streaming, and Lightweight charts for candlestick visualization.  SASS is used for styling components.  The project uses the vite build system.
+The web client is fundamentally a TypeScript React WebApp using Redux Toolkit for state management and backend interaction, SignalR for WebSocket real-time data streaming, and Lightweight charts for candlestick visualization.  SASS is used for styling components.  The project uses the vite build system.
 
 # Testing
 
@@ -51,7 +51,7 @@ The web client has little in the way of direct unit tests, but does provide many
 The project follows a logical and consistent structure to ensure that navigation and discovery are as effortless as possible.  The main entry point to the application is the main.tsx file, and the majority of client code is located in the `/src` directory.
 
 #### High-Level `/src` Overview:
-- app: Contains the core data stuctures consumed by the app, as well as all redux slices and the majority of the request/response API code.
+- app: Contains the core data structures consumed by the app, as well as all redux slices and the majority of the request/response API code.
 - controls: Simple, reusable component controls. These are pure, testable components which do not require redux interaction.
 - features: Most of the web-apps feature UI components. In particular, all of our content "pages" live in this folder. If you wish to add another feature to the client, this is most likely where you should include it.
 - services: A home for the underlying services providing functionality to the entire app. Currently these are exclusively used for handling signalR data streaming.
@@ -66,6 +66,6 @@ The project follows a logical and consistent structure to ensure that navigation
 
 # Conclusion
 
-Thanks again for taking the time to review this project!  If you have any questions, don't hesistate to reach out, and happy trading with Alacrity!
+Thanks again for taking the time to review this project!  If you have any questions, don't hesitate to reach out, and happy trading with Alacrity!
 
 \- N
