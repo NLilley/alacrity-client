@@ -120,7 +120,7 @@ const infoPaths = [
   },
   {
     path: 'privacy-policy',
-    element: <PrivacyPolicyPage />
+    element:  <NotImplementedPage />
   },
   {
     path: 'terms-and-conditions',

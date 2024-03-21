@@ -84,7 +84,12 @@ section.trade {
   .information {
     border-top: var(--basic-border);
     padding-top: 16px;
+    margin-top: 40px;
   }
+
+  section.trade {
+    display: block; 
+   }
 }
 
 @media (max-width: global.$mobile-break-point) {
